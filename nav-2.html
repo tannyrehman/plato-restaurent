@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        ul.nav li {
+            display: inline-block;
+            color: black;
+            padding: 10px;
+            margin-right: 8px;
+            border: 1px solid #000;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        ul.nav li.active {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="active">Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Contact</li>
+        <li>Service</li>
+    </ul>
+
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+        let nav = "ul.nav li";
+    $(nav).on("click", function(){
+        $(nav).removeClass("active");
+        $(this).addClass("active");
+    })
+    </script>
+</body>
+</html>

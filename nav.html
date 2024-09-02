@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+          <p>
+            Animated Navigation Bar using <br />
+            CSS3 & JavaScript
+          </p>
+        </div>
+        <ul class="nav">
+          <li class="active">Home</li>
+          <li>About Us</li>
+          <li>Settings</li>
+          <li>Newsfeed</li>
+          <li>Sign Out</li>
+        </ul>
+      </div>
+
+
+      <script>
+        const items = document.querySelectorAll("ul li");
+            items.forEach((item) => {
+        item.addEventListener("click", () => {
+         document.querySelector("li.active").classList.remove("active");
+        item.classList.add("active");
+        });
+    });
+
+      </script>
+
+</body>
+</html>
